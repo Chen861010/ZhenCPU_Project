@@ -1,8 +1,5 @@
 # CPU_Project
 A SystemVerilog-based verification environment for the ZhenCPU, including FSM, ALU, register, memory testing, waveform analysis, and functional coverage.
-# ZhenCPU Verification Environment
-
-A SystemVerilog-based verification environment for the ZhenCPU, including FSM, ALU, register, memory testing, waveform analysis, and functional coverage.
 
 ##  Overview
 ZhenCPU is a simplified CPU designed for instruction-level execution and hardware verification learning.  
