@@ -1,0 +1,76 @@
+# ================================
+# ZhenCPU Verification .gitignore
+# SystemVerilog / Xcelium / VCS / Modelsim / Verilator
+# ================================
+
+# ------------------------
+# Simulation output dumps
+# ------------------------
+*.vcd
+*.fsdb
+*.vpd
+*.wlf
+*.trn
+*.log
+*.csv
+*.out
+*.jou
+*.pb
+
+# Xcelium waves / history
+xcelium.d/
+INCA_libs/
+*.shm/
+*.hvp
+*.mdl
+*.svdb/
+
+# VCS build / simulation artifacts
+simv*
+csrc/
+ucli.key
+vc_hdrs.h
+vcs.key
+DVEfiles/
+
+# Modelsim / Questa build directories
+work/
+transcript
+vsim.dbg
+*.wlf
+modelsim.ini
+
+# Verilator build outputs
+obj_dir/
+logs/
+*.bin
+*.dat
+
+# Temporary editor files
+*.swp
+*.swo
+*~
+*.tmp
+
+# Mac / Windows system garbage
+.DS_Store
+Thumbs.db
+
+# Python virtual environment (if used for scripts)
+venv/
+__pycache__/
+*.pyc
+
+# Coverage reports (optional: keep only HTML exports)
+*.ucdb
+coverage/
+cov_work/
+*.daidir/
+*.cdd
+
+# Compiled memory / hex images (generated)
+*.hex
+*.mem
+
+# Waveform screenshots (optional: remove if you want to keep PNGs)
+*.png
