@@ -1,0 +1,36 @@
+xrun(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s003: Started on Dec 06, 2025 at 23:43:12 PST
+xrun
+	typedefs.sv
+	cpu_tb.sv
+	cpu.sv
+	Mem.sv
+	ALU.sv
+	8S_control.sv
+	8bit_rig.sv
+	5bit_count.sv
+	2to1_mux.sv
+	-access +rwc
+	-gui
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /usr/local/apps/cadence/xcelium/IUS2203/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm testbench.dut.accum testbench.dut.addr testbench.dut.alu_clk testbench.dut.alu_out testbench.dut.clk testbench.dut.cntrl_clk testbench.dut.data_out testbench.dut.fetch testbench.dut.halt testbench.dut.inc_pc testbench.dut.ir_addr testbench.dut.ir_out testbench.dut.load_ac testbench.dut.load_ir testbench.dut.load_pc testbench.dut.mem_rd testbench.dut.mem_wr testbench.dut.opcode testbench.dut.pc_addr testbench.dut.rst_ testbench.dut.state testbench.dut.zero
+Created probe 1
+xcelium> run
+
+========= CPU FULL TEST SUITE =========
+Test1 Result: PASS
+Test2 Result: PASS
+Test3 Result: PASS
+========================================
+Simulation stopped via $stop(1) at time 23970 NS + 1
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	22.03-s003: Exiting on Dec 06, 2025 at 23:45:22 PST  (total: 00:02:10)

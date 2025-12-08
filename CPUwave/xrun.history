@@ -1,0 +1,7 @@
+s1(06Dec2025:23:16:20):  xrun typedefs.sv cpu_tb.sv cpu.sv Mem.sv ALU.sv 8S_control.sv 8bit_rig.sv 5bit_count.sv 2to1_mux.sv -access +rwc -gui 
+s2(06Dec2025:23:29:28):  xrun typedefs.sv cpu_tb.sv cpu.sv Mem.sv ALU.sv 8S_control.sv 8bit_rig.sv 5bit_count.sv 2to1_mux.sv -access +rwc -gui 
+s3(06Dec2025:23:32:02):  xrun typedefs.sv cpu_tb.sv cpu.sv Mem.sv ALU.sv 8S_control.sv 8bit_rig.sv 5bit_count.sv 2to1_mux.sv -access +rwc -gui 
+s4(06Dec2025:23:35:23):  xrun typedefs.sv cpu_tb.sv cpu.sv Mem.sv ALU.sv 8S_control.sv 8bit_rig.sv 5bit_count.sv 2to1_mux.sv -access +rwc -gui 
+s5(06Dec2025:23:40:03):  xrun typedefs.sv cpu_tb.sv cpu.sv Mem.sv ALU.sv 8S_control.sv 8bit_rig.sv 5bit_count.sv 2to1_mux.sv -access +rwc -gui 
+s6(06Dec2025:23:41:47):  xrun typedefs.sv cpu_tb.sv cpu.sv Mem.sv ALU.sv 8S_control.sv 8bit_rig.sv 5bit_count.sv 2to1_mux.sv -access +rwc -gui 
+s7(06Dec2025:23:43:13):  xrun typedefs.sv cpu_tb.sv cpu.sv Mem.sv ALU.sv 8S_control.sv 8bit_rig.sv 5bit_count.sv 2to1_mux.sv -access +rwc -gui 
