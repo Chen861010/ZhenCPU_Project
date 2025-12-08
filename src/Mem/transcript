@@ -1,0 +1,45 @@
+# ** Note: (vsim-220) '/nfs/guille/a2/rh80apps/mentor/questa-2025/questasim/linux_x86_64/../modelsim.ini' is used as the ini file.
+# ** Warning: (vsim-8689) Ignoring plusarg '+acc'.  Did you mean '-voptargs=+acc'?
+# vsim work.mem_test -coverage "+acc" -c -do "cover.do" 
+# Start time: 21:53:55 on Dec 07,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-220) '/nfs/guille/a2/rh80apps/mentor/questa-2025/questasim/linux_x86_64/../modelsim.ini' is used as the ini file.
+# ** Warning: (vopt-2009) At least one design unit was compiled with optimization level -O0 or -O1.
+# Use vdir -l command to find such design units.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# //  Questa Sim-64
+# //  Version 2025.2_1 linux_x86_64 Jun 26 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.mem_test(fast)
+# Loading work.mem(fast)
+# do cover.do
+# 
+# ==== Clear Memory Test ====
+# >>> Clear Memory Test PASSED
+# 
+# ==== Data = Address Test ====
+# >>> Data = Address Test PASSED
+# 
+# ==== Random Stress Test (10000 iterations) ====
+# 
+# ==== Random Stress Test DONE ====
+# ** Note: $stop    : mem_test.sv(137)
+#    Time: 301760 ns  Iteration: 1  Instance: /mem_test
+# Break in NamedBeginStat memtest at mem_test.sv line 137
+# Stopped at mem_test.sv line 137
+# 
+# 
+# End time: 21:53:59 on Dec 07,2025, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 2

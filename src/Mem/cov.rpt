@@ -1,0 +1,727 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /mem_test
+=== Design Unit: work.mem_test
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        12         8         4    66.66%
+
+================================Branch Details================================
+
+Branch Coverage for instance /mem_test
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File mem_test.sv
+------------------------------------IF Branch------------------------------------
+    83                                        32     Count coming in to IF
+    83              1                    ***0***     
+                                              32     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    101                                       32     Count coming in to IF
+    101             1                    ***0***     
+                                              32     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    120                                    10000     Count coming in to IF
+    120             1                       4960     
+    130             1                       5040     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    126                                     4960     Count coming in to IF
+    126             1                    ***0***     
+                                            4960     All False Count
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    185                                        2     Count coming in to IF
+    185             1                          2     
+    187             1                    ***0***     
+Branch totals: 1 hit of 2 branches = 50.00%
+
+------------------------------------IF Branch------------------------------------
+    199                                    30176     Count coming in to IF
+    199             1                       5024     
+                                           25152     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       6         1         5    16.66%
+
+================================Condition Details================================
+
+Condition Coverage for instance /mem_test --
+
+  File mem_test.sv
+----------------Focused Condition View-------------------
+Line       83 Item    1  (rdata !== 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (rdata !== 0)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (rdata !== 0)_0       -                             
+  Row   2:    ***0***  (rdata !== 0)_1       -                             
+
+----------------Focused Condition View-------------------
+Line       101 Item    1  (rdata !== i)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (rdata !== i)         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (rdata !== i)_0       -                             
+  Row   2:    ***0***  (rdata !== i)_1       -                             
+
+----------------Focused Condition View-------------------
+Line       126 Item    1  (read_back !== rand_data[7:0])
+Condition totals: 0 of 1 input term covered = 0.00%
+
+                      Input Term   Covered  Reason for no coverage   Hint
+                     -----------  --------  -----------------------  --------------
+  (read_back !== rand_data[7:0])         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target                        Non-masking condition(s)      
+ ---------  ---------  --------------------              -------------------------     
+  Row   1:          1  (read_back !== rand_data[7:0])_0  -                             
+  Row   2:    ***0***  (read_back !== rand_data[7:0])_1  -                             
+
+----------------Focused Condition View-------------------
+Line       185 Item    1  (status == 0)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (status == 0)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (status == 0)_0       -                             
+  Row   2:          1  (status == 0)_1       -                             
+
+----------------Focused Condition View-------------------
+Line       199 Item    1  (write && !read)
+Condition totals: 1 of 2 input terms covered = 50.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+       write         Y
+        read         N  '_1' not hit             Hit '_1'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  write_0               -                             
+  Row   2:          1  write_1               ~read                         
+  Row   3:          1  read_0                write                         
+  Row   4:    ***0***  read_1                write                         
+
+
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses          7        na        na        na
+            Covergroup Bins        168       168         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /mem_test/mem_cg                                100.00%        100          -    Covered              
+    covered/total bins:                                   168        168          -                      
+    missing/total bins:                                     0        168          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_addr                                100.00%        100          -    Covered              
+        covered/total bins:                                32         32          -                      
+        missing/total bins:                                 0         32          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_write                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_read                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_illegal                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_read_after_write                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cr_addr_write                               100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cr_addr_read                                100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/mem_test/mem_cov               100.00%        100          -    Covered              
+    covered/total bins:                                   168        168          -                      
+    missing/total bins:                                     0        168          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_addr                                100.00%        100          -    Covered              
+        covered/total bins:                                32         32          -                      
+        missing/total bins:                                 0         32          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin all_addr[0]                                   993          1          -    Covered              
+        bin all_addr[1]                                   890          1          -    Covered              
+        bin all_addr[2]                                   834          1          -    Covered              
+        bin all_addr[3]                                   976          1          -    Covered              
+        bin all_addr[4]                                   962          1          -    Covered              
+        bin all_addr[5]                                   874          1          -    Covered              
+        bin all_addr[6]                                   958          1          -    Covered              
+        bin all_addr[7]                                   876          1          -    Covered              
+        bin all_addr[8]                                   996          1          -    Covered              
+        bin all_addr[9]                                   946          1          -    Covered              
+        bin all_addr[10]                                  974          1          -    Covered              
+        bin all_addr[11]                                  976          1          -    Covered              
+        bin all_addr[12]                                  984          1          -    Covered              
+        bin all_addr[13]                                  934          1          -    Covered              
+        bin all_addr[14]                                 1014          1          -    Covered              
+        bin all_addr[15]                                  914          1          -    Covered              
+        bin all_addr[16]                                  958          1          -    Covered              
+        bin all_addr[17]                                 1012          1          -    Covered              
+        bin all_addr[18]                                  984          1          -    Covered              
+        bin all_addr[19]                                  870          1          -    Covered              
+        bin all_addr[20]                                  900          1          -    Covered              
+        bin all_addr[21]                                  894          1          -    Covered              
+        bin all_addr[22]                                  914          1          -    Covered              
+        bin all_addr[23]                                  964          1          -    Covered              
+        bin all_addr[24]                                  883          1          -    Covered              
+        bin all_addr[25]                                  908          1          -    Covered              
+        bin all_addr[26]                                  944          1          -    Covered              
+        bin all_addr[27]                                  964          1          -    Covered              
+        bin all_addr[28]                                  966          1          -    Covered              
+        bin all_addr[29]                                 1008          1          -    Covered              
+        bin all_addr[30]                                  934          1          -    Covered              
+        bin all_addr[31]                                  972          1          -    Covered              
+    Coverpoint cp_write                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin w0                                          25152          1          -    Covered              
+        bin w1                                           5024          1          -    Covered              
+    Coverpoint cp_read                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin r0                                          20112          1          -    Covered              
+        bin r1                                          10064          1          -    Covered              
+    Coverpoint cp_illegal                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin both_high                               0                     -    ZERO                 
+        bin auto[0]                                     15088          1          -    Covered              
+        bin auto[1]                                      5024          1          -    Covered              
+        bin auto[2]                                     10064          1          -    Covered              
+    Coverpoint cp_read_after_write                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin after_write                                 10064          1          -    Covered              
+        default bin before_write                            0                     -    ZERO                 
+    Cross cr_addr_write                               100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_addr[31],w1>                         157          1          -    Covered              
+            bin <all_addr[30],w1>                         154          1          -    Covered              
+            bin <all_addr[29],w1>                         165          1          -    Covered              
+            bin <all_addr[28],w1>                         160          1          -    Covered              
+            bin <all_addr[27],w1>                         160          1          -    Covered              
+            bin <all_addr[26],w1>                         155          1          -    Covered              
+            bin <all_addr[25],w1>                         154          1          -    Covered              
+            bin <all_addr[24],w1>                         139          1          -    Covered              
+            bin <all_addr[23],w1>                         156          1          -    Covered              
+            bin <all_addr[22],w1>                         143          1          -    Covered              
+            bin <all_addr[21],w1>                         156          1          -    Covered              
+            bin <all_addr[20],w1>                         154          1          -    Covered              
+            bin <all_addr[19],w1>                         133          1          -    Covered              
+            bin <all_addr[18],w1>                         157          1          -    Covered              
+            bin <all_addr[17],w1>                         168          1          -    Covered              
+            bin <all_addr[16],w1>                         159          1          -    Covered              
+            bin <all_addr[15],w1>                         160          1          -    Covered              
+            bin <all_addr[14],w1>                         174          1          -    Covered              
+            bin <all_addr[13],w1>                         164          1          -    Covered              
+            bin <all_addr[12],w1>                         168          1          -    Covered              
+            bin <all_addr[11],w1>                         159          1          -    Covered              
+            bin <all_addr[10],w1>                         158          1          -    Covered              
+            bin <all_addr[9],w1>                          162          1          -    Covered              
+            bin <all_addr[8],w1>                          178          1          -    Covered              
+            bin <all_addr[7],w1>                          143          1          -    Covered              
+            bin <all_addr[6],w1>                          150          1          -    Covered              
+            bin <all_addr[5],w1>                          145          1          -    Covered              
+            bin <all_addr[4],w1>                          171          1          -    Covered              
+            bin <all_addr[3],w1>                          164          1          -    Covered              
+            bin <all_addr[2],w1>                          134          1          -    Covered              
+            bin <all_addr[1],w1>                          156          1          -    Covered              
+            bin <all_addr[0],w1>                          168          1          -    Covered              
+            bin <all_addr[31],w0>                         815          1          -    Covered              
+            bin <all_addr[30],w0>                         780          1          -    Covered              
+            bin <all_addr[29],w0>                         843          1          -    Covered              
+            bin <all_addr[28],w0>                         806          1          -    Covered              
+            bin <all_addr[27],w0>                         804          1          -    Covered              
+            bin <all_addr[26],w0>                         789          1          -    Covered              
+            bin <all_addr[25],w0>                         754          1          -    Covered              
+            bin <all_addr[24],w0>                         744          1          -    Covered              
+            bin <all_addr[23],w0>                         808          1          -    Covered              
+            bin <all_addr[22],w0>                         771          1          -    Covered              
+            bin <all_addr[21],w0>                         738          1          -    Covered              
+            bin <all_addr[20],w0>                         746          1          -    Covered              
+            bin <all_addr[19],w0>                         737          1          -    Covered              
+            bin <all_addr[18],w0>                         827          1          -    Covered              
+            bin <all_addr[17],w0>                         844          1          -    Covered              
+            bin <all_addr[16],w0>                         799          1          -    Covered              
+            bin <all_addr[15],w0>                         754          1          -    Covered              
+            bin <all_addr[14],w0>                         840          1          -    Covered              
+            bin <all_addr[13],w0>                         770          1          -    Covered              
+            bin <all_addr[12],w0>                         816          1          -    Covered              
+            bin <all_addr[11],w0>                         817          1          -    Covered              
+            bin <all_addr[10],w0>                         816          1          -    Covered              
+            bin <all_addr[9],w0>                          784          1          -    Covered              
+            bin <all_addr[8],w0>                          818          1          -    Covered              
+            bin <all_addr[7],w0>                          733          1          -    Covered              
+            bin <all_addr[6],w0>                          808          1          -    Covered              
+            bin <all_addr[5],w0>                          729          1          -    Covered              
+            bin <all_addr[4],w0>                          791          1          -    Covered              
+            bin <all_addr[3],w0>                          812          1          -    Covered              
+            bin <all_addr[2],w0>                          700          1          -    Covered              
+            bin <all_addr[1],w0>                          734          1          -    Covered              
+            bin <all_addr[0],w0>                          825          1          -    Covered              
+    Cross cr_addr_read                                100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_addr[31],r1>                         329          1          -    Covered              
+            bin <all_addr[30],r1>                         313          1          -    Covered              
+            bin <all_addr[29],r1>                         339          1          -    Covered              
+            bin <all_addr[28],r1>                         323          1          -    Covered              
+            bin <all_addr[27],r1>                         322          1          -    Covered              
+            bin <all_addr[26],r1>                         317          1          -    Covered              
+            bin <all_addr[25],r1>                         300          1          -    Covered              
+            bin <all_addr[24],r1>                         303          1          -    Covered              
+            bin <all_addr[23],r1>                         326          1          -    Covered              
+            bin <all_addr[22],r1>                         314          1          -    Covered              
+            bin <all_addr[21],r1>                         291          1          -    Covered              
+            bin <all_addr[20],r1>                         296          1          -    Covered              
+            bin <all_addr[19],r1>                         302          1          -    Covered              
+            bin <all_addr[18],r1>                         335          1          -    Covered              
+            bin <all_addr[17],r1>                         338          1          -    Covered              
+            bin <all_addr[16],r1>                         320          1          -    Covered              
+            bin <all_addr[15],r1>                         297          1          -    Covered              
+            bin <all_addr[14],r1>                         333          1          -    Covered              
+            bin <all_addr[13],r1>                         303          1          -    Covered              
+            bin <all_addr[12],r1>                         324          1          -    Covered              
+            bin <all_addr[11],r1>                         329          1          -    Covered              
+            bin <all_addr[10],r1>                         329          1          -    Covered              
+            bin <all_addr[9],r1>                          311          1          -    Covered              
+            bin <all_addr[8],r1>                          320          1          -    Covered              
+            bin <all_addr[7],r1>                          295          1          -    Covered              
+            bin <all_addr[6],r1>                          329          1          -    Covered              
+            bin <all_addr[5],r1>                          292          1          -    Covered              
+            bin <all_addr[4],r1>                          310          1          -    Covered              
+            bin <all_addr[3],r1>                          324          1          -    Covered              
+            bin <all_addr[2],r1>                          283          1          -    Covered              
+            bin <all_addr[1],r1>                          289          1          -    Covered              
+            bin <all_addr[0],r1>                          328          1          -    Covered              
+            bin <all_addr[31],r0>                         643          1          -    Covered              
+            bin <all_addr[30],r0>                         621          1          -    Covered              
+            bin <all_addr[29],r0>                         669          1          -    Covered              
+            bin <all_addr[28],r0>                         643          1          -    Covered              
+            bin <all_addr[27],r0>                         642          1          -    Covered              
+            bin <all_addr[26],r0>                         627          1          -    Covered              
+            bin <all_addr[25],r0>                         608          1          -    Covered              
+            bin <all_addr[24],r0>                         580          1          -    Covered              
+            bin <all_addr[23],r0>                         638          1          -    Covered              
+            bin <all_addr[22],r0>                         600          1          -    Covered              
+            bin <all_addr[21],r0>                         603          1          -    Covered              
+            bin <all_addr[20],r0>                         604          1          -    Covered              
+            bin <all_addr[19],r0>                         568          1          -    Covered              
+            bin <all_addr[18],r0>                         649          1          -    Covered              
+            bin <all_addr[17],r0>                         674          1          -    Covered              
+            bin <all_addr[16],r0>                         638          1          -    Covered              
+            bin <all_addr[15],r0>                         617          1          -    Covered              
+            bin <all_addr[14],r0>                         681          1          -    Covered              
+            bin <all_addr[13],r0>                         631          1          -    Covered              
+            bin <all_addr[12],r0>                         660          1          -    Covered              
+            bin <all_addr[11],r0>                         647          1          -    Covered              
+            bin <all_addr[10],r0>                         645          1          -    Covered              
+            bin <all_addr[9],r0>                          635          1          -    Covered              
+            bin <all_addr[8],r0>                          676          1          -    Covered              
+            bin <all_addr[7],r0>                          581          1          -    Covered              
+            bin <all_addr[6],r0>                          629          1          -    Covered              
+            bin <all_addr[5],r0>                          582          1          -    Covered              
+            bin <all_addr[4],r0>                          652          1          -    Covered              
+            bin <all_addr[3],r0>                          652          1          -    Covered              
+            bin <all_addr[2],r0>                          551          1          -    Covered              
+            bin <all_addr[1],r0>                          601          1          -    Covered              
+            bin <all_addr[0],r0>                          665          1          -    Covered              
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      67        59         8    88.05%
+
+================================Statement Details================================
+
+Statement Coverage for instance /mem_test --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File mem_test.sv
+    7               1                          1     
+    8               1                      60353     
+    8               2                      60352     
+    52              1                          1     
+    53              1                          1     
+    53              2                    ***0***     
+    54              1                    ***0***     
+    61              1                          1     
+    62              1                          1     
+    63              1                          1     
+    64              1                          1     
+    76              1                          1     
+    77              1                          1     
+    77              2                         32     
+    78              1                         32     
+    80              1                          1     
+    81              1                          1     
+    81              2                         32     
+    82              1                         32     
+    84              1                    ***0***     
+    85              1                    ***0***     
+    89              1                          1     
+    94              1                          1     
+    95              1                          1     
+    95              2                         32     
+    96              1                         32     
+    98              1                          1     
+    99              1                          1     
+    99              2                         32     
+    100             1                         32     
+    102             1                    ***0***     
+    103             1                    ***0***     
+    107             1                          1     
+    112             1                          1     
+    115             1                          1     
+    115             2                      10000     
+    117             1                      10000     
+    118             1                      10000     
+    122             1                       4960     
+    125             1                       4960     
+    127             1                    ***0***     
+    132             1                       5040     
+    136             1                          1     
+    137             1                          1     
+    150             1                       5024     
+    151             1                       5024     
+    152             1                       5024     
+    153             1                       5024     
+    154             1                       5024     
+    156             1                       5024     
+    158             1                       5024     
+    159             1                       5024     
+    170             1                      10064     
+    171             1                      10064     
+    172             1                      10064     
+    173             1                      10064     
+    175             1                      10064     
+    176             1                      10064     
+    176             2                      10064     
+    178             1                      10064     
+    179             1                      10064     
+    186             1                          2     
+    188             1                    ***0***     
+    198             1                      30176     
+    200             1                       5024     
+    201             1                       5024     
+    221             1                          1     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        282       109       173    38.65%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /mem_test --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                addr_written[0-31]           0           0        0.00 
+                                   rand_addr[5-31]           0           0        0.00 
+                                   rand_data[8-31]           0           0        0.00 
+                                          rdata[4]           0           1       50.00 
+                                        rdata[5-7]           0           0        0.00 
+
+Total Node Count     =        141 
+Toggled Node Count   =         54 
+Untoggled Node Count =         87 
+
+Toggle Coverage      =      38.65% (109 of 282 bins)
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /mem_test/mem_cg                                100.00%        100          -    Covered              
+    covered/total bins:                                   168        168          -                      
+    missing/total bins:                                     0        168          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_addr                                100.00%        100          -    Covered              
+        covered/total bins:                                32         32          -                      
+        missing/total bins:                                 0         32          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_write                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_read                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_illegal                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint cp_read_after_write                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cr_addr_write                               100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross cr_addr_read                                100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/mem_test/mem_cov               100.00%        100          -    Covered              
+    covered/total bins:                                   168        168          -                      
+    missing/total bins:                                     0        168          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_addr                                100.00%        100          -    Covered              
+        covered/total bins:                                32         32          -                      
+        missing/total bins:                                 0         32          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin all_addr[0]                                   993          1          -    Covered              
+        bin all_addr[1]                                   890          1          -    Covered              
+        bin all_addr[2]                                   834          1          -    Covered              
+        bin all_addr[3]                                   976          1          -    Covered              
+        bin all_addr[4]                                   962          1          -    Covered              
+        bin all_addr[5]                                   874          1          -    Covered              
+        bin all_addr[6]                                   958          1          -    Covered              
+        bin all_addr[7]                                   876          1          -    Covered              
+        bin all_addr[8]                                   996          1          -    Covered              
+        bin all_addr[9]                                   946          1          -    Covered              
+        bin all_addr[10]                                  974          1          -    Covered              
+        bin all_addr[11]                                  976          1          -    Covered              
+        bin all_addr[12]                                  984          1          -    Covered              
+        bin all_addr[13]                                  934          1          -    Covered              
+        bin all_addr[14]                                 1014          1          -    Covered              
+        bin all_addr[15]                                  914          1          -    Covered              
+        bin all_addr[16]                                  958          1          -    Covered              
+        bin all_addr[17]                                 1012          1          -    Covered              
+        bin all_addr[18]                                  984          1          -    Covered              
+        bin all_addr[19]                                  870          1          -    Covered              
+        bin all_addr[20]                                  900          1          -    Covered              
+        bin all_addr[21]                                  894          1          -    Covered              
+        bin all_addr[22]                                  914          1          -    Covered              
+        bin all_addr[23]                                  964          1          -    Covered              
+        bin all_addr[24]                                  883          1          -    Covered              
+        bin all_addr[25]                                  908          1          -    Covered              
+        bin all_addr[26]                                  944          1          -    Covered              
+        bin all_addr[27]                                  964          1          -    Covered              
+        bin all_addr[28]                                  966          1          -    Covered              
+        bin all_addr[29]                                 1008          1          -    Covered              
+        bin all_addr[30]                                  934          1          -    Covered              
+        bin all_addr[31]                                  972          1          -    Covered              
+    Coverpoint cp_write                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin w0                                          25152          1          -    Covered              
+        bin w1                                           5024          1          -    Covered              
+    Coverpoint cp_read                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin r0                                          20112          1          -    Covered              
+        bin r1                                          10064          1          -    Covered              
+    Coverpoint cp_illegal                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin both_high                               0                     -    ZERO                 
+        bin auto[0]                                     15088          1          -    Covered              
+        bin auto[1]                                      5024          1          -    Covered              
+        bin auto[2]                                     10064          1          -    Covered              
+    Coverpoint cp_read_after_write                    100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin after_write                                 10064          1          -    Covered              
+        default bin before_write                            0                     -    ZERO                 
+    Cross cr_addr_write                               100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_addr[31],w1>                         157          1          -    Covered              
+            bin <all_addr[30],w1>                         154          1          -    Covered              
+            bin <all_addr[29],w1>                         165          1          -    Covered              
+            bin <all_addr[28],w1>                         160          1          -    Covered              
+            bin <all_addr[27],w1>                         160          1          -    Covered              
+            bin <all_addr[26],w1>                         155          1          -    Covered              
+            bin <all_addr[25],w1>                         154          1          -    Covered              
+            bin <all_addr[24],w1>                         139          1          -    Covered              
+            bin <all_addr[23],w1>                         156          1          -    Covered              
+            bin <all_addr[22],w1>                         143          1          -    Covered              
+            bin <all_addr[21],w1>                         156          1          -    Covered              
+            bin <all_addr[20],w1>                         154          1          -    Covered              
+            bin <all_addr[19],w1>                         133          1          -    Covered              
+            bin <all_addr[18],w1>                         157          1          -    Covered              
+            bin <all_addr[17],w1>                         168          1          -    Covered              
+            bin <all_addr[16],w1>                         159          1          -    Covered              
+            bin <all_addr[15],w1>                         160          1          -    Covered              
+            bin <all_addr[14],w1>                         174          1          -    Covered              
+            bin <all_addr[13],w1>                         164          1          -    Covered              
+            bin <all_addr[12],w1>                         168          1          -    Covered              
+            bin <all_addr[11],w1>                         159          1          -    Covered              
+            bin <all_addr[10],w1>                         158          1          -    Covered              
+            bin <all_addr[9],w1>                          162          1          -    Covered              
+            bin <all_addr[8],w1>                          178          1          -    Covered              
+            bin <all_addr[7],w1>                          143          1          -    Covered              
+            bin <all_addr[6],w1>                          150          1          -    Covered              
+            bin <all_addr[5],w1>                          145          1          -    Covered              
+            bin <all_addr[4],w1>                          171          1          -    Covered              
+            bin <all_addr[3],w1>                          164          1          -    Covered              
+            bin <all_addr[2],w1>                          134          1          -    Covered              
+            bin <all_addr[1],w1>                          156          1          -    Covered              
+            bin <all_addr[0],w1>                          168          1          -    Covered              
+            bin <all_addr[31],w0>                         815          1          -    Covered              
+            bin <all_addr[30],w0>                         780          1          -    Covered              
+            bin <all_addr[29],w0>                         843          1          -    Covered              
+            bin <all_addr[28],w0>                         806          1          -    Covered              
+            bin <all_addr[27],w0>                         804          1          -    Covered              
+            bin <all_addr[26],w0>                         789          1          -    Covered              
+            bin <all_addr[25],w0>                         754          1          -    Covered              
+            bin <all_addr[24],w0>                         744          1          -    Covered              
+            bin <all_addr[23],w0>                         808          1          -    Covered              
+            bin <all_addr[22],w0>                         771          1          -    Covered              
+            bin <all_addr[21],w0>                         738          1          -    Covered              
+            bin <all_addr[20],w0>                         746          1          -    Covered              
+            bin <all_addr[19],w0>                         737          1          -    Covered              
+            bin <all_addr[18],w0>                         827          1          -    Covered              
+            bin <all_addr[17],w0>                         844          1          -    Covered              
+            bin <all_addr[16],w0>                         799          1          -    Covered              
+            bin <all_addr[15],w0>                         754          1          -    Covered              
+            bin <all_addr[14],w0>                         840          1          -    Covered              
+            bin <all_addr[13],w0>                         770          1          -    Covered              
+            bin <all_addr[12],w0>                         816          1          -    Covered              
+            bin <all_addr[11],w0>                         817          1          -    Covered              
+            bin <all_addr[10],w0>                         816          1          -    Covered              
+            bin <all_addr[9],w0>                          784          1          -    Covered              
+            bin <all_addr[8],w0>                          818          1          -    Covered              
+            bin <all_addr[7],w0>                          733          1          -    Covered              
+            bin <all_addr[6],w0>                          808          1          -    Covered              
+            bin <all_addr[5],w0>                          729          1          -    Covered              
+            bin <all_addr[4],w0>                          791          1          -    Covered              
+            bin <all_addr[3],w0>                          812          1          -    Covered              
+            bin <all_addr[2],w0>                          700          1          -    Covered              
+            bin <all_addr[1],w0>                          734          1          -    Covered              
+            bin <all_addr[0],w0>                          825          1          -    Covered              
+    Cross cr_addr_read                                100.00%        100          -    Covered              
+        covered/total bins:                                64         64          -                      
+        missing/total bins:                                 0         64          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <all_addr[31],r1>                         329          1          -    Covered              
+            bin <all_addr[30],r1>                         313          1          -    Covered              
+            bin <all_addr[29],r1>                         339          1          -    Covered              
+            bin <all_addr[28],r1>                         323          1          -    Covered              
+            bin <all_addr[27],r1>                         322          1          -    Covered              
+            bin <all_addr[26],r1>                         317          1          -    Covered              
+            bin <all_addr[25],r1>                         300          1          -    Covered              
+            bin <all_addr[24],r1>                         303          1          -    Covered              
+            bin <all_addr[23],r1>                         326          1          -    Covered              
+            bin <all_addr[22],r1>                         314          1          -    Covered              
+            bin <all_addr[21],r1>                         291          1          -    Covered              
+            bin <all_addr[20],r1>                         296          1          -    Covered              
+            bin <all_addr[19],r1>                         302          1          -    Covered              
+            bin <all_addr[18],r1>                         335          1          -    Covered              
+            bin <all_addr[17],r1>                         338          1          -    Covered              
+            bin <all_addr[16],r1>                         320          1          -    Covered              
+            bin <all_addr[15],r1>                         297          1          -    Covered              
+            bin <all_addr[14],r1>                         333          1          -    Covered              
+            bin <all_addr[13],r1>                         303          1          -    Covered              
+            bin <all_addr[12],r1>                         324          1          -    Covered              
+            bin <all_addr[11],r1>                         329          1          -    Covered              
+            bin <all_addr[10],r1>                         329          1          -    Covered              
+            bin <all_addr[9],r1>                          311          1          -    Covered              
+            bin <all_addr[8],r1>                          320          1          -    Covered              
+            bin <all_addr[7],r1>                          295          1          -    Covered              
+            bin <all_addr[6],r1>                          329          1          -    Covered              
+            bin <all_addr[5],r1>                          292          1          -    Covered              
+            bin <all_addr[4],r1>                          310          1          -    Covered              
+            bin <all_addr[3],r1>                          324          1          -    Covered              
+            bin <all_addr[2],r1>                          283          1          -    Covered              
+            bin <all_addr[1],r1>                          289          1          -    Covered              
+            bin <all_addr[0],r1>                          328          1          -    Covered              
+            bin <all_addr[31],r0>                         643          1          -    Covered              
+            bin <all_addr[30],r0>                         621          1          -    Covered              
+            bin <all_addr[29],r0>                         669          1          -    Covered              
+            bin <all_addr[28],r0>                         643          1          -    Covered              
+            bin <all_addr[27],r0>                         642          1          -    Covered              
+            bin <all_addr[26],r0>                         627          1          -    Covered              
+            bin <all_addr[25],r0>                         608          1          -    Covered              
+            bin <all_addr[24],r0>                         580          1          -    Covered              
+            bin <all_addr[23],r0>                         638          1          -    Covered              
+            bin <all_addr[22],r0>                         600          1          -    Covered              
+            bin <all_addr[21],r0>                         603          1          -    Covered              
+            bin <all_addr[20],r0>                         604          1          -    Covered              
+            bin <all_addr[19],r0>                         568          1          -    Covered              
+            bin <all_addr[18],r0>                         649          1          -    Covered              
+            bin <all_addr[17],r0>                         674          1          -    Covered              
+            bin <all_addr[16],r0>                         638          1          -    Covered              
+            bin <all_addr[15],r0>                         617          1          -    Covered              
+            bin <all_addr[14],r0>                         681          1          -    Covered              
+            bin <all_addr[13],r0>                         631          1          -    Covered              
+            bin <all_addr[12],r0>                         660          1          -    Covered              
+            bin <all_addr[11],r0>                         647          1          -    Covered              
+            bin <all_addr[10],r0>                         645          1          -    Covered              
+            bin <all_addr[9],r0>                          635          1          -    Covered              
+            bin <all_addr[8],r0>                          676          1          -    Covered              
+            bin <all_addr[7],r0>                          581          1          -    Covered              
+            bin <all_addr[6],r0>                          629          1          -    Covered              
+            bin <all_addr[5],r0>                          582          1          -    Covered              
+            bin <all_addr[4],r0>                          652          1          -    Covered              
+            bin <all_addr[3],r0>                          652          1          -    Covered              
+            bin <all_addr[2],r0>                          551          1          -    Covered              
+            bin <all_addr[1],r0>                          601          1          -    Covered              
+            bin <all_addr[0],r0>                          665          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+Total Coverage By Instance (filtered view): 62.00%
+

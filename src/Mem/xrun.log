@@ -1,0 +1,64 @@
+xrun(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s003: Started on Dec 07, 2025 at 22:21:00 PST
+xrun
+	Mem.sv
+	mem_test.sv
+	-access +rwc
+	-gui
+Recompiling... reason: file './mem_test.sv' is newer than expected.
+	expected: Sun Dec  7 21:31:34 2025
+	actual:   Sun Dec  7 22:00:20 2025
+file: mem_test.sv
+	module worklib.mem_test:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		mem_test
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.mem_test:sv <0x6219b3ce>
+			streams:  26, words: 23871
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:              29      29
+		Scalar wires:            3       -
+		Vectored wires:          3       -
+		Always blocks:           4       4
+		Initial blocks:          7       7
+		Pseudo assignments:      5       5
+		Covergroup Instances:    0       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.mem_test:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /usr/local/apps/cadence/xcelium/IUS2203/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm mem_test.dut.addr mem_test.dut.clk mem_test.dut.data_in mem_test.dut.data_out mem_test.dut.memory mem_test.dut.read mem_test.dut.write
+Created probe 1
+xcelium> run
+
+==== Clear Memory Test ====
+>>> Clear Memory Test PASSED
+
+==== Data = Address Test ====
+>>> Data = Address Test PASSED
+
+==== Random Stress Test (5000 iterations) ====
+xmsim: *W,OLDURR: The default algorithm for $urandom_range and randcase is used. It can have distribution problems..
+
+==== Random Stress Test DONE ====
+Simulation stopped via $stop(1) at time 151540 NS + 0
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	22.03-s003: Exiting on Dec 07, 2025 at 22:27:32 PST  (total: 00:06:32)
