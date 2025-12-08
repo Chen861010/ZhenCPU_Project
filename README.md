@@ -142,7 +142,48 @@ vsim -c top_tb -do "do cover.do; run -all; coverage report -output cov.rpt; quit
 ```bash
 vsim -viewcov work.ucdb
 ```
+---
+## JasperGold Formal Verification (`run.tcl`)
+
+`run.tcl` is used to run formal verification (FPV) using **Cadence JasperGold**.  
+This script clears the environment, analyzes RTL + property files, elaborates the design, and sets clocks/resets.
+
+### Example `run.tcl` Script
+
+```tcl
+# Clear the environment
+clear -all
+
+# Analyze design files
+analyze -verilog \
+    source/design/arbiter.v \
+    source/design/port_select.v \
+    source/design/bridge.v \
+    source/design/egress.v \
+    source/design/ingress.v \
+    source/design/top.v
+
+# Elaborate design and properties
+elaborate -top
+
+# Set up Clocks and Resets
+clock clk
+reset ~rstN
+```
+
+### Running the Script
+
+To execute the Tcl script in JasperGold:
+
+```tcl
+include run.tcl
+```
+
+### Launching JasperGold
+
+```bash
+jg
+```
 
 ---
-
 
