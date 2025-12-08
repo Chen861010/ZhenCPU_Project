@@ -1,0 +1,55 @@
+xrun(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s003: Started on Dec 07, 2025 at 11:30:29 PST
+xrun
+	typedefs.sv
+	8S_control.sv
+	control_test.sv
+	-access +rwc
+	-gui
+Recompiling... reason: file './control_test.sv' is newer than expected.
+	expected: Sun Dec  7 10:40:40 2025
+	actual:   Sun Dec  7 11:29:45 2025
+file: control_test.sv
+	module worklib.control_test:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		typedefs
+		$unit_0x4512597e
+		control_test
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.control:sv <0x59398c58>
+			streams:   5, words:  5101
+		worklib.control_test:sv <0x09f4a1c7>
+			streams:  28, words: 22475
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                   2       2
+		Verilog packages:          1       1
+		Registers:                28      28
+		Scalar wires:             18       -
+		Vectored wires:            6       -
+		Always blocks:             4       4
+		Initial blocks:            6       6
+		Cont. assignments:         3       4
+		Pseudo assignments:       12      12
+		Covergroup Instances:      0       2
+		Compilation units:         1       1
+		Simulation timescale:  100ps
+	Writing initial simulation snapshot: worklib.control_test:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /usr/local/apps/cadence/xcelium/IUS2203/tools/xcelium/files/xmsimrc
+xcelium> ^C
+xcelium> exit
+xmsim: *W,NORUNCMD: No 'run' command issued.
+TOOL:	xrun(64)	22.03-s003: Exiting on Dec 07, 2025 at 11:35:13 PST  (total: 00:04:44)
