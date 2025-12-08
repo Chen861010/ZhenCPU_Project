@@ -1,0 +1,56 @@
+xrun(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s003: Started on Dec 07, 2025 at 14:35:02 PST
+xrun
+	counter_test.sv
+	5bit_count.sv
+	-access +rwc
+	-gui
+Recompiling... reason: file './counter_test.sv' is newer than expected.
+	expected: Sun Dec  7 12:50:06 2025
+	actual:   Sun Dec  7 14:33:20 2025
+file: counter_test.sv
+endtask;
+       |
+xmvlog: *W,UEXPSC (counter_test.sv,100|7): Ignored unexpected semicolon following SystemVerilog description keyword (endtask).
+endtask;
+       |
+xmvlog: *W,UEXPSC (counter_test.sv,146|7): Ignored unexpected semicolon following SystemVerilog description keyword (endtask).
+	module worklib.counter_test:sv
+		errors: 0, warnings: 2
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		counter_test
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.counter:sv <0x08f3ad93>
+			streams:   2, words:   775
+		worklib.counter_test:sv <0x21ed3b06>
+			streams:  25, words: 33028
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                   Instances  Unique
+		Modules:                   2       2
+		Registers:                13      13
+		Scalar wires:              4       -
+		Vectored wires:            3       -
+		Always blocks:             2       2
+		Initial blocks:            6       6
+		Pseudo assignments:        6       6
+		Covergroup Instances:      0       3
+		Simulation timescale:  100ps
+	Writing initial simulation snapshot: worklib.counter_test:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+SVSEED default: 1
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /usr/local/apps/cadence/xcelium/IUS2203/tools/xcelium/files/xmsimrc
+xcelium> ^C
+xcelium> exit
+xmsim: *W,NORUNCMD: No 'run' command issued.
+TOOL:	xrun(64)	22.03-s003: Exiting on Dec 07, 2025 at 14:36:15 PST  (total: 00:01:13)
