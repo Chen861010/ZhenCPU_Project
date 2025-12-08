@@ -68,23 +68,17 @@ waves/                       # User-generated waveform screenshots or FSDB expor
 README.md                    # Project documentation (this file)
 ```
 
-```
-
 ---
 
-## 🖥️ Simulation Tools
+## Cadence Xcelium + SimVision (`runme.sh`)
 
----
-
-# Cadence Xcelium + SimVision (`runme.sh`)
-
-`runme.sh` is used for full CPU simulation and waveform debugging using Cadence Xcelium and SimVision.  
-This script compiles the RTL + testbench and launches the waveform viewer.
+`runme.sh` is used for **full CPU simulation** and **waveform debugging** using **Cadence Xcelium** and **SimVision**.  
+This script compiles RTL + testbench and opens the waveform viewer.
 
 ### Typical Flow
 
 ```bash
-./runme.sh      # compile + simulate + open SimVision waveform viewer
+./runme.sh      # compile + simulate + open SimVision
 ```
 
 ### Internally, the script performs:
@@ -97,21 +91,21 @@ xrun -64bit -access +rwc \
 
 ### Features
 
-- Fast compile/runtime for iterative development  
-- FSDB waveform viewing with SimVision  
+- Fast compile and runtime  
+- FSDB/SHM waveform viewing through SimVision  
 - Full SystemVerilog assertion (SVA) support  
-- Suitable for CPU-level waveform debugging  
+- Ideal for CPU-level waveform debugging and instruction-level analysis  
 
 ### Output Files
 
 - `xrun.log` — simulation log  
 - `xcelium.d/` — build directory  
 - `waves.shm/` or `.fsdb` — waveform database  
-- `simvision_history/` — GUI state history  
+- `simvision_history/` — SimVision GUI state  
 
 ---
 
-## **QuestaSim Functional Coverage (`runcover.sh`)**
+## QuestaSim Functional Coverage (`runcover.sh`)
 
 `runcover.sh` is designed specifically for **functional coverage** using **QuestaSim UCDB**.  
 This script compiles modules, runs the testbench, executes `cover.do`, and writes coverage reports.
