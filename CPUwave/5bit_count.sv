@@ -1,29 +1,53 @@
+//==============================================================
+//  counter.sv — 5-bit Up Counter with Load and Active-Low Reset
+//
+//  Description:
+//    • Asynchronous active-low reset clears the counter to 0
+//    • On each positive clock edge:
+//         – If load = 1 → count is set to input data
+//         – Else if enable = 1 → count increments by 1
+//         – Otherwise → hold previous value
+//
+//  Ports:
+//    data   — 5-bit load value
+//    load   — load-enable signal (higher priority than enable)
+//    enable — increment-enable signal
+//    clk    — positive-edge clock
+//    rst_   — asynchronous active-low reset
+//    count  — 5-bit counter output
+//==============================================================
+
+timeunit 1ns;
+timeprecision 100ps;
+
 module counter (
-    input  logic [4:0] data,      // 5-bit input value to be loaded into the counter
-    input  logic load,            // Load control signal (active high)
-    input  logic enable,          // Enable signal to increment the counter (active high)
-    input  logic clk,             // Clock signal (positive-edge triggered)
-    input  logic rst_,            // Asynchronous reset, active low
-    output logic [4:0] count      // 5-bit counter output
+    input  logic [4:0] data,     // 5-bit input value for load
+    input  logic       load,     // Load control (active high)
+    input  logic       enable,   // Increment control (active high)
+    input  logic       clk,      // Clock (posedge triggered)
+    input  logic       rst_,     // Asynchronous active-low reset
+    output logic [4:0] count     // 5-bit counter output
 );
 
-    // Sequential logic: asynchronous active-low reset, otherwise update on posedge clk
+    // ------------------------------------------------------------
+    // Sequential logic:
+    //   — Reset has highest priority
+    //   — Load overrides increment
+    // ------------------------------------------------------------
     always_ff @(posedge clk or negedge rst_) begin
         if (!rst_) begin
-            // When reset is asserted (low), force counter to 0
+            // Reset: force counter to zero
             count <= 5'd0;
         end
         else if (load) begin
-            // When load is asserted, load the 5-bit input data into the counter
+            // Load new count value
             count <= data;
         end
         else if (enable) begin
-            // When enable is asserted (and load is not), increment the counter by 1
+            // Increment counter by 1
             count <= count + 1'b1;
         end
-        // If none of the above conditions are true:
-        // The counter automatically retains its current value (no assignment needed)
+        // else: hold previous value (implicit)
     end
 
 endmodule
-
