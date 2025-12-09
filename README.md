@@ -10,7 +10,7 @@ This repository contains:
 - RTL source code (SystemVerilog) organized per module  
 - Self-checking testbenches for each module (ALU, Mem, Mux, Rig, Controller, Counter)  
 - CPU-level integration testbench  
-- Waveform analysis using **Cadence Xcelium + SimVision**  
+- Waveform analysis using **Cadence SimVision**  
 - Functional coverage and simulation support using **QuestaSim / ModelSim**  
 - Formal property verification (FPV) for FSM, registers, counters, and ALU  
 - Instruction program testing environment  
